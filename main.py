@@ -16,12 +16,10 @@ class Main:
 
         self.snake = Snake()
 
-        """
-        This is just a small change for test my git repo
-        """
         
 
     def drawbg(self):
+        self.display_surface.fill(LIGHT_GREEN)
         for rect in self.bg_rects:
             pygame.draw.rect(self.display_surface, DARK_GREEN, rect)
 
@@ -33,8 +31,9 @@ class Main:
                     pygame.quit()
                     exit()
             
-            self.display_surface.fill(LIGHT_GREEN)
+            
             self.drawbg()
+            self.snake.draw()
             pygame.display.update()
 
 if __name__ == '__main__':
